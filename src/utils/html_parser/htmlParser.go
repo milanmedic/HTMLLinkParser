@@ -45,8 +45,9 @@ func (hp *HTMLParser) GetLinks(contents string) (map[string]Link, error) {
 
 func handleTextToken(links map[string]Link, link *Link, linkFound *bool, tokenizer *html.Tokenizer) {
 	if *linkFound {
-		if !bytes.Equal(tokenizer.Text(), []byte(html.CommentToken.String())) {
-			link.SetText(string(tokenizer.Text()))
+		text := tokenizer.Text()
+		if !bytes.Equal(text, []byte(html.CommentToken.String())) {
+			link.SetText(string(text))
 			links[link.GetHref()] = *link
 			*linkFound = false
 		}

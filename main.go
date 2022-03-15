@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	filename := flag.String("Filename", "page.html", "Filename of the HTML file that needs to be parsed.")
+	filename := flag.String("filename", "page.html", "Filename of the HTML file that needs to be parsed.")
 	flag.Parse()
 
 	fr := CreateFileReader()
