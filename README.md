@@ -1,3 +1,5 @@
+# HTML Link Parser
+
 In this exercise your goal is create a package that makes it easy to parse an HTML file and extract all of the links (**`<a href="">...</a>`** tags). For each extracted link you should return a data structure that includes both the **`href`**, as well as the text inside the link. Any HTML inside of the link can be stripped out, along with any extra whitespace including newlines, back-to-back spaces, etc.
 
 Links will be nested in different HTML elements, and it is very possible that you will have to deal with HTML similar to code below.
@@ -25,11 +27,11 @@ Once you have a working program, try to write some tests for it to practice usin
 
 ### **Notes**
 
-**1. Use the x/net/html package** (DONE)
+**1. Use the x/net/html package**
 
 I recommend checking out the [x/net/html](https://godoc.org/golang.org/x/net/html) package for this task, which you will need to **`go get`**. It is provided by the Go team, but isn’t included in the standard library. This makes it a little easier to parse HTML files.
 
-**2. Ignore nested links** (IN PROGRESS - NOT SUPPORTED CURRENTLY)
+**2. Ignore nested links** (LIMITED SUPPORT)
 
 You can ignore any links nested inside of another link. Eg with following HTML:
 
@@ -42,11 +44,11 @@ You can ignore any links nested inside of another link. Eg with following HTML:
 
 It is okay if your code returns only the outside link.
 
-**3. Get something working before focusing on edge-cases** (IN-PROGRESS)
+**3. Get something working before focusing on edge-cases**
 
 Don’t worry about having perfect code. Chances are there will be a lot of edge cases here that will be kinda tricky to handle. Just try to cover the most basic use cases first and then improve on that.
 
-**4. A few HTML examples have been provided** (DONE)
+**4. A few HTML examples have been provided**
 
 I created a few simpler HTML files and included them in this repo to help with testing. They won’t cover all potential use cases, but should help you start testing out your code.
 
